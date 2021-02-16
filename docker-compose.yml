@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  jupyter:
+    labels:
+      - Author="Lucas Eliaquim"
+    build:
+      context: .
+      dockerfile: docker/jupyter.Dockerfile
+    volumes:
+      - ./:/home
+    ports:
+      - "8888:8888"
